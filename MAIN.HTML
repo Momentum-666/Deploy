@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="pink">
+
+
+<ol id="myList">
+<li> Hayat Regency</li>
+<li id="myLi1"> J W Marriot</li>
+<li> Forest Hill</li>
+<li id="myLI"> Lalit</li>
+<li> Tullip Resort</li>
+</ol>
+
+<pre>
+<button id="btn1" onclick="myFunction()">Append Child</button>            <button id="btn1" onclick="myFunction1()">Remove Child</button>       <button id="btn1" onclick="myFunction2()">Replace Child</button>
+</pre>
+
+<script>
+function myFunction(){
+var li = document.createElement("LI");
+var node = document.createTextNode("Madhu Mahal");
+li.appendChild(node);
+ document.getElementById("myList").appendChild(li);
+
+}
+
+function myFunction1(){
+var item = document.getElementById("myLI");
+item.parentNode.removeChild(item);
+
+
+}
+function myFunction2() {
+  var elmnt = document.createElement("li");
+  var textnode = document.createTextNode("Ramada plaza");
+  elmnt.appendChild(textnode);
+  var item = document.getElementById("myLi1");
+
+ 
+  item.parentNode.replaceChild(elmnt, item);
+}
+</script>
+
+</body>
+</html>
